@@ -1,3 +1,8 @@
+/**
+*  PrevPrey.pde
+*  By: Chris Jimenez
+*/
+
 import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.*;
@@ -9,19 +14,21 @@ Minim minim;
 AudioPlayer collisionSound1;
 AudioPlayer collisionSound2;
 
-int score;//score
+//  score
+int score;  
 int startTime;
 int currentTime;
-int displayTime;//time
+int displayTime;
 int count= 120;
 
-int state = 0;//INITIAL state
+//  INITIAL state
+int state = 0;
 
 ColorQuadrillateral predator;
 PulsatingCircle prey;
 PulsatingSquare redEnemy;
 
-//For the easy,medium,hard buttons
+//  easy,medium,hard buttons
 PImage easyButtonImage;
 PImage easyButtonPressedImage;
 PImage mediumButtonImage;
@@ -34,30 +41,30 @@ ImageButton hardButton;
 
 PFont font;
 
-//=============================================================
+/**
+*  Setup the game
+*/
 void setup() {
   size(500, 500);
   frameRate(30);
 
-  // set up Minim  
+  //  set up Minim  
   minim = new Minim(this);
 
-  // load in our audio file
+  // load in audio file
   collisionSound1 = minim.loadFile("crash-sound.mp3");
   collisionSound2 = minim.loadFile("thump-sound.mp3");
 
-
-
-  //create predator
+  //  create predator
   predator = new ColorQuadrillateral();
-
-  //create a prey
+  
+  //  create prey
   prey = new PulsatingCircle(predator.xPos, predator.yPos);
-
-  //create red enemy
+  
+  //  create red enemy
   redEnemy = new PulsatingSquare();
 
-  //button images
+  //  load button images
   easyButtonImage = loadImage("easybutton.png");
   easyButtonPressedImage = loadImage("easybutton-pressed.png");
   mediumButtonImage = loadImage("mediumbutton.png");
@@ -65,24 +72,26 @@ void setup() {
   hardButtonImage = loadImage("hardbutton.png");
   hardButtonPressedImage = loadImage("hardbutton-pressed.png");
 
-  //create button objects
+  //  create button objects
   easyButton = new ImageButton(easyButtonImage, easyButtonPressedImage);
   mediumButton = new ImageButton(mediumButtonImage, mediumButtonPressedImage);
   hardButton = new ImageButton(hardButtonImage, hardButtonPressedImage);
-
 }
 
-//===============================================================
+/**
+*
+*/
 void draw() { 
   smooth();
   background(0);
   fill(255);
 
-  //space travelling simulation!
+  //  space travelling simulation!
   for (int i = 0; i < 20; i++) {
     ellipse(random(width), random(height), 2, 2);
   }
-  //states correspond to different levels
+  
+  //  states correspond to different levels
   if (state == 0) {
     startGame();
   }
@@ -97,11 +106,12 @@ void draw() {
   }
 }
 
-//==================================================
-//method that displays the start screen or title screen
+/**
+*  Displays the start screen or title screen
+*/
 void startGame() {
 
-  //Place characters in title screen in the background
+  //  Place characters in the background of start screen
   prey.display();
   prey.move();
   predator.display();
@@ -123,7 +133,7 @@ void startGame() {
   hardButton.display(100, 350);
   text("-->You're not the only predator.", 210, 380);
 
-  //Display title
+  //  Display title
   font = loadFont("SynchroLET-48.vlw");
   textFont(font);
   text("Predator v. Prey", 50, 100);
@@ -143,18 +153,25 @@ void startGame() {
   }
 }
 
-//=================================================
-//different levels of gaming
+/**
+*  Set up easy game, which is the base for the other levels
+*/
 void easyGame() {
   playGame();
 }
 
+/**
+*  Set up medium game, adjusting accel of both prey + predator
+*/
 void mediumGame() {
   prey.adjustAccel(0.3);
   predator.adjustAccel(0.8);
   playGame();
 }
 
+/**
+*  Set up medium game, adjusting accel of both prey + predator
+*/
 void hardGame() {
   prey.adjustAccel(0.3);
   predator.adjustAccel(0.8);
@@ -165,8 +182,9 @@ void hardGame() {
   redEnemy.display();
 }
 
-//=========================================================
-//game play function
+/**
+*  Displays everything on to the sketch
+*/
 void playGame() {
   displayFadingText("CHASE THE CIRCLE!", 130, 200);
 
@@ -181,8 +199,9 @@ void playGame() {
   checkCollision(prey, predator);
 }
 
-//==============================================================
-//resets the game
+/**
+*  Resets the game.
+*/
 void reset() {
   //initialize position of the predator & prey
   predator.reset();
@@ -194,8 +213,11 @@ void reset() {
 }
 
 
-//==============================================================
-//display the fading text on the screen
+/**
+*  Displays fading text on to the sketch
+*  s = Text being displayed
+*  x,y = xy position of text
+*/
 void displayFadingText(String s, float x, float y) {
   fill(255, 255, 255, count--);
   textSize(25);//slightlty larger text size
@@ -203,8 +225,9 @@ void displayFadingText(String s, float x, float y) {
   textSize(15);//return text size back to normal
 }
 
-//==============================================================
-//displays the time and score on the screen
+/**
+*  Set up medium game, adjusting accel of both prey + predator
+*/
 void displayTimeAndScore() {
   //time & score
   fill(255);
