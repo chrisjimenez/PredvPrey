@@ -1,0 +1,74 @@
+<!-- Basic Page Needs
+  By: Chris Jimenez
+  
+  Project site for Predator vs.Prey Processing Project.
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Specific metas 
+    –––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- js libs 
+    –––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" src ="libs/processing.min.js"></script>
+    <script type="text/javascript" src ="libs/minim.js"></script>
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <title>Testing Processing.js with Skeleton</title>
+  </head>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <body>
+    <div id = "content">
+      <h1 id = "title" >Predator vs. Prey</h1>
+      <p  id = "subtitle">Project Site</p>
+
+	  <!-- Description + Canvas
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <p>
+	    This is my predator vs. prey game! When I first started to think about what I should do for the game, I wanted to do something that would simulate interstellar traveling. So I did that by randomly placing small circles in the background everytime the draw() function was called.
+	  </p>
+
+	  <p>
+	    You are the randomly colored quadrilateral and your objective is to catch the pulsating circle. Every time you “catch” or collide with the prey, you get a point. If at any point you want to reset the game, simply press the “r” key. You can control your predator using your UP, DOWN, LEFT, RIGHT keys.
+	  </p>
+	  <canvas id = "PredvPrey" data-processing-sources="project/src/PredvPrey.pde project/src/ColorQuadrillateral.pde project/src/PulsatingCircle.pde project/src/PulsatingSquare.pde project/src/ImageButton.pde">
+	    :/ Looks like your browser doesn't support the HTML5 canvas tag.
+	  </canvas>
+
+	  <!-- Footer
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <hr>
+      	<a href = https://www.chrisjim.com> Personal Site</a>
+      	  <a href = https://www.github.com/chrisjimenez>
+      	  	 <img id ="github_icon" src="images/github_icon.png"/>
+      	  	 <p> Github </p>
+      	  </a>
+      </hr>
+	</div>	
+  <!-- End of Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+  </body>
+</html>
+
