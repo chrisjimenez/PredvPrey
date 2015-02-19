@@ -4,5 +4,5 @@ This is my predator vs. prey game! When I first started to think about what I sh
 
 You can control your predator using your UP, DOWN, LEFT, RIGHT keys.
 
-You cna check out the gameplay footage [here](https://www.youtube.com/watch?v=05_MGoR-0FA)
+You can play the game [here](http://chrisjimenez.github.io/PredvPrey/)!
 
