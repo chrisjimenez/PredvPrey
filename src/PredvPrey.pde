@@ -68,12 +68,12 @@ void setup() {
   redEnemy = new PulsatingSquare();
 
   //  load button images
-  easyButtonImage = loadImage("PredvPrey/easybutton.png");
-  easyButtonPressedImage = loadImage("PredvPrey/easybutton-pressed.png");
-  mediumButtonImage = loadImage("PredvPrey/mediumbutton.png");
-  mediumButtonPressedImage = loadImage("PredvPrey/mediumbutton-pressed.png");
-  hardButtonImage = loadImage("PredvPrey/hardbutton.png");
-  hardButtonPressedImage = loadImage("PredvPrey/hardbutton-pressed.png");
+  easyButtonImage = loadImage("assets/easybutton.png");
+  easyButtonPressedImage = loadImage("assets/easybutton-pressed.png");
+  mediumButtonImage = loadImage("assets/mediumbutton.png");
+  mediumButtonPressedImage = loadImage("assets/mediumbutton-pressed.png");
+  hardButtonImage = loadImage("assets/hardbutton.png");
+  hardButtonPressedImage = loadImage("assets/hardbutton-pressed.png");
 
   //  create button objects
   easyButton = new ImageButton(easyButtonImage, easyButtonPressedImage);
