@@ -53,8 +53,8 @@ void setup() {
   minim = new Minim(this);
 
   // load in audio file
-  collisionSound1 = minim.loadFile("assets/crash-sound.mp3");
-  collisionSound2 = minim.loadFile("assets/thump-sound.mp3");
+  collisionSound1 = minim.loadFile("assets/crash-sound.ogg");
+  collisionSound2 = minim.loadFile("assets/thump-sound.ogg");
 
   //  create predator
   predator = new ColorQuadrillateral();
