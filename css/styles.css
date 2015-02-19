@@ -59,7 +59,8 @@ img {
 	border: 1px solid grey;
 }
 
-#github_icon{
+.icon{
+	float: left;
 	border : 0px;
 	width: 2em;
 	height: 2em;
