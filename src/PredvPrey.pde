@@ -3,8 +3,6 @@
 *  By: Chris Jimenez
 */
 
-/* @pjs font="http://fonts.googleapis.com/css?family=Orbitron:400,700"; */
-
 
 import ddf.minim.spi.*;
 import ddf.minim.signals.*;
@@ -55,8 +53,8 @@ void setup() {
   minim = new Minim(this);
 
   // load in audio file
-  collisionSound1 = minim.loadFile("crash-sound.mp3");
-  collisionSound2 = minim.loadFile("thump-sound.mp3");
+  collisionSound1 = minim.loadFile("assets/crash-sound.mp3");
+  collisionSound2 = minim.loadFile("assets/thump-sound.mp3");
 
   //  create predator
   predator = new ColorQuadrillateral();
