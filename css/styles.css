@@ -11,7 +11,7 @@
 	margin-right:80px;
 	margin-left:80px;
 
-	padding: 50px;
+	padding: 20px;
 
 	background-color:#000000;
 	min-height:400px;	
@@ -64,5 +64,11 @@ img {
 	border : 0px;
 	width: 2em;
 	height: 2em;
-	margin: 0;
+	margin: 5px
+}
+
+a{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
 }
