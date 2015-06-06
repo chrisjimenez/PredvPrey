@@ -3,6 +3,7 @@
 *  By: Chris Jimenez
 */
 
+
 import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.*;
@@ -52,8 +53,8 @@ void setup() {
   minim = new Minim(this);
 
   // load in audio file
-  collisionSound1 = minim.loadFile("crash-sound.mp3");
-  collisionSound2 = minim.loadFile("thump-sound.mp3");
+  collisionSound1 = minim.loadFile("assets/crash-sound.ogg");
+  collisionSound2 = minim.loadFile("assets/thump-sound.ogg");
 
   //  create predator
   predator = new ColorQuadrillateral();
@@ -65,12 +66,12 @@ void setup() {
   redEnemy = new PulsatingSquare();
 
   //  load button images
-  easyButtonImage = loadImage("easybutton.png");
-  easyButtonPressedImage = loadImage("easybutton-pressed.png");
-  mediumButtonImage = loadImage("mediumbutton.png");
-  mediumButtonPressedImage = loadImage("mediumbutton-pressed.png");
-  hardButtonImage = loadImage("hardbutton.png");
-  hardButtonPressedImage = loadImage("hardbutton-pressed.png");
+  easyButtonImage = loadImage("assets/easybutton.png");
+  easyButtonPressedImage = loadImage("assets/easybutton-pressed.png");
+  mediumButtonImage = loadImage("assets/mediumbutton.png");
+  mediumButtonPressedImage = loadImage("assets/mediumbutton-pressed.png");
+  hardButtonImage = loadImage("assets/hardbutton.png");
+  hardButtonPressedImage = loadImage("assets/hardbutton-pressed.png");
 
   //  create button objects
   easyButton = new ImageButton(easyButtonImage, easyButtonPressedImage);
@@ -125,18 +126,17 @@ void startGame() {
   fill(255);
   easyButton.resizeButton(100, 50);
   easyButton.display(100, 150);
-  text("-->for beginners.", 210, 180);
+  text("--> for beginners.", 210, 180);
   mediumButton.resizeButton(100, 50);
   mediumButton.display(100, 250);
-  text("-->A little bit faster.", 210, 280);
+  text("--> A little bit faster.", 210, 280);
   hardButton.resizeButton(100, 50);
   hardButton.display(100, 350);
-  text("-->You're not the only predator.", 210, 380);
+  text("--> You're not the only predator.", 210, 380);
 
   //  Display title
-  font = loadFont("SynchroLET-48.vlw");
-  textFont(font);
-  text("Predator v. Prey", 50, 100);
+  textFont(createFont("Orbitron", 36));
+  text("Predator v. Prey", 75, 100);
 
   //commands if either button is pressed
   if (easyButton.isPressed() && mousePressed) {
