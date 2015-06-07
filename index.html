@@ -1,20 +1,12 @@
+<!DOCTYPE html>
 <!-- 
   By: Chris Jimenez
-  
   Project site for Predator vs. Prey Processing Project.
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Specific metas 
-    –––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- js libs 
@@ -44,45 +36,32 @@
       <h1 id = "title" >Predator vs. Prey</h1>
       <p  id = "subtitle">Project Site</p>
 
-    <!-- Description + Canvas
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <p>
-      This is my predator vs. prey game! When I first started to think about what I should do for the game, I wanted to do something that would simulate interstellar traveling. So I did that by randomly placing small circles in the background everytime the draw() function was called.
-    </p>
+      <!-- Description + Canvas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <p>
+        This is my predator vs. prey game! When I first started to think about what I should do for the game, I wanted to do something that would simulate interstellar traveling. So I did that by randomly placing small circles in the background everytime the draw() function was called.
+      </p>
 
-    <p>
-      You are the randomly colored quadrilateral and your objective is to catch the pulsating circle. Every time you “catch” or collide with the prey, you get a point. If at any point you want to reset the game, simply press the “r” key. You can control your predator using your UP, DOWN, LEFT, RIGHT keys.
-    </p>
-    <canvas id = "PredvPrey" data-processing-sources="src/PredvPrey.pde src/ColorQuadrillateral.pde src/PulsatingCircle.pde src/PulsatingSquare.pde src/ImageButton.pde">
-      :/ Looks like your browser doesn't support the HTML5 canvas tag.
-    </canvas>
+      <p>
+        You are the randomly colored quadrilateral and your objective is to catch the pulsating circle. Every time you “catch” or collide with the prey, you get a point. If at any point you want to reset the game, simply press the “r” key. You can control your predator using your UP, DOWN, LEFT, RIGHT keys.
+      </p>
+      <canvas id = "PredvPrey" data-processing-sources="src/PredvPrey.pde src/ColorQuadrillateral.pde src/PulsatingCircle.pde src/PulsatingSquare.pde src/ImageButton.pde">
+        :/ Looks like your browser doesn't support the HTML5 canvas tag.
+      </canvas>
 
 
-    <p>
-    This was originally a desktop game, but by using the Processing.js library I was able to set it up on this site. 
-    </p>
+      <p>
+      This was originally a desktop game, but by using the Processing.js library I was able to set it up on this site. 
+      </p>
 
-    <!-- Footer
+      <!-- Footer
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <hr>
-
-        <a href = https://www.chrisjim.com> 
-          <div>
-            <img class ="icon" src="images/me_icon.png"/> Personal Site
-          </div>
+      <div class = "footer">
+        <a href = "https://github.com/chrisjimenez/predvprey"> 
+          <img src ="images/github-icon.png" />
         </a>
-
-        <a href = https://www.github.com/chrisjimenez>
-          <div>
-            <img class ="icon" src="images/github_icon.png"/>Github Account
-          </div>
-        </a>
-
-        
-      </hr>
-  </div>  
-  <!-- End of Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+      </div>
+    </div>  
   </body>
 </html>
-
